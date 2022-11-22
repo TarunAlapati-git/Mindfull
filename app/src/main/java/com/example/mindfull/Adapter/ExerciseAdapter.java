@@ -78,8 +78,6 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
             exerciseName = itemView.findViewById(R.id.exerciseNameList);
             exerciseDesc = itemView.findViewById(R.id.exerciseDesc);
 
-
-
         }
     }
 

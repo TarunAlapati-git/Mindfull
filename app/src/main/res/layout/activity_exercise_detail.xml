@@ -66,6 +66,15 @@
 
             </androidx.cardview.widget.CardView>
 
+           <Button
+               android:id="@+id/addRepBtn"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="Add Reps"
+               android:layout_margin="20dp"
+               />
+
+
         </LinearLayout>
 
     </ScrollView>
