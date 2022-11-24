@@ -34,13 +34,5 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         binding.exerciseDesc.setText(exerciseDescription);
         Picasso.get().load(exerciseImage).placeholder(R.drawable.avatar).into(binding.exerciseImage);
 
-        addRepButton = findViewById(R.id.addRepBtn);
-        addRepButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AddRep.newInstance().show(getSupportFragmentManager(),AddRep.TAG);
-            }
-        });
-
     }
 }
