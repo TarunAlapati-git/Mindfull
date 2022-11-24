@@ -53,6 +53,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ExerciseDetailActivity.class);
+                intent.putExtra("exerciseName",exercises.getName());
                 intent.putExtra("exerciseImage",exercises.getImage());
                 intent.putExtra("exerciseDescription",exercises.getDescription());
                 context.startActivity(intent);

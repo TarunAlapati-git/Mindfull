@@ -28,9 +28,12 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
 
+        String exerciseName = getIntent().getStringExtra("exerciseName");
         String exerciseImage = getIntent().getStringExtra("exerciseImage");
         String exerciseDescription = getIntent().getStringExtra("exerciseDescription");
 
+
+        binding.exerciseName.setText(exerciseName);
         binding.exerciseDesc.setText(exerciseDescription);
         Picasso.get().load(exerciseImage).placeholder(R.drawable.avatar).into(binding.exerciseImage);
 
