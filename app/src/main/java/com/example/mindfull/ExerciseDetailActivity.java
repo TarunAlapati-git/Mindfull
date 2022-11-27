@@ -80,7 +80,6 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                 database.getReference().child("Reps").child(auth.getUid()).push().setValue(exerciseRecord).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-
                     }
                 });
             }
