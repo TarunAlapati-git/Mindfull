@@ -6,6 +6,7 @@
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/drawable-v24/about.xml" value="0.1" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/drawable-v24/button_bg_round.xml" value="0.158" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/drawable/about.xml" value="0.1" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/drawable/bg_exercise_record.xml" value="0.6" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/activity_exercise_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/activity_meditate_detail.xml" value="0.25416666666666665" />
@@ -13,11 +14,16 @@
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/activity_signin.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/add_rep.xml" value="0.253125" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/bg_exercise_record.xml" value="0.253125" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/each_rep.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/exercise_record.xml" value="0.190625" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/exercisetrack.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/fragment_blank.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/fragment_exercise.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/fragment_meditate.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/input_file.xml" value="0.253125" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/sample_exercise_record.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/sample_show_exercise.xml" value="0.253125" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/layout/sample_show_music.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/Mindfull/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
