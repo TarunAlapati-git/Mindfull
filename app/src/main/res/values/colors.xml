@@ -8,8 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#0b6156</color>
-    <color name="colorPrimaryDark">#095849</color>
+    <color name="colorPrimary">#1204D6</color>
+    <color name="colorPrimaryDark">#16036A</color>
     <color name="colorAccent">#830AC5</color>
     <color name="lightGrey">#EDEDED</color>
     <color name="whatsAppColor">#8b6156</color>

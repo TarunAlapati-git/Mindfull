@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mindfull.Models.ExerciseRecord;
 import com.example.mindfull.Models.Exercises;
 import com.example.mindfull.R;
-import com.github.mikephil.charting.charts.BarChart;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -59,9 +59,7 @@ public class SignupActivity extends AppCompatActivity {
                                         String id = task.getResult().getUser().getUid();
                                         database.getReference().child("Users").child(id).setValue(user);
 
-
                                         Toast.makeText(SignupActivity.this,"Signup Successful",Toast.LENGTH_SHORT).show();
-
 
                                     } else {
                                         Toast.makeText(SignupActivity.this,task.getException().toString(),Toast.LENGTH_SHORT).show();

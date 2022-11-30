@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,12 +20,12 @@
         android:orientation="vertical"
         >
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/ic_whatsapp"/>
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="219dp"
+            android:layout_height="193dp"
+            android:src="@drawable/logo" />
 
         <EditText
             android:layout_width="match_parent"
@@ -36,9 +35,9 @@
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:padding="9dp"
+            android:padding="15dp"
             android:textColor="@color/lightGrey"
-            android:textColorHint="@color/chatbackground"
+            android:textColorHint="@color/white"
             />
 
         <EditText
@@ -51,7 +50,7 @@
             android:inputType="textPassword"
             android:padding="9dp"
             android:textColor="@color/lightGrey"
-            android:textColorHint="@color/chatbackground" />
+            android:textColorHint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,7 +61,8 @@
             android:textColor="@color/white"
             android:gravity="right"
             android:padding="5dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColorLink="@color/black"/>
 
         <Button
             android:layout_width="150dp"
@@ -72,7 +72,7 @@
             android:padding="15dp"
             android:text="Sign in"
             android:textAllCaps="false"
-            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:backgroundTint="@color/purple_700"
             />
 
         <LinearLayout

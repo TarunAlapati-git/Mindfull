@@ -28,7 +28,6 @@ public class MeditateDetailActivity extends AppCompatActivity {
 
     static MediaPlayer mediaPlayer;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +68,5 @@ public class MeditateDetailActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
-
 }
