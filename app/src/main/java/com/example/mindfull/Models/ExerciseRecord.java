@@ -2,7 +2,21 @@ package com.example.mindfull.Models;
 
 public class ExerciseRecord {
 
-    String uId,repName,repCount,date,repId;
+    String uId;
+    String repName;
+    String repCount;
+    String date;
+    String repId;
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    String month;
 
     public String getRepId() {
         return repId;
@@ -12,15 +26,15 @@ public class ExerciseRecord {
         this.repId = repId;
     }
 
-    public ExerciseRecord(String uId, String repName, String repCount, String date) {
+    public ExerciseRecord(String uId, String repName, String repCount, String date,String month) {
         this.uId = uId;
         this.repName = repName;
         this.repCount = repCount;
         this.date = date;
+        this.month = month;
     }
 
     public ExerciseRecord(String uId, String repName,String repCount) {
-        this.uId = uId;
         this.repName = repName;
         this.repCount = repCount;
     }

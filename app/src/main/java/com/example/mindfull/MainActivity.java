@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.settings:
-                Toast.makeText(this,"Settings is clicked",Toast.LENGTH_SHORT).show();
+            case R.id.analytics:
+                Toast.makeText(this,"Analytics is clicked",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.logout:
                 mAuth.signOut();
