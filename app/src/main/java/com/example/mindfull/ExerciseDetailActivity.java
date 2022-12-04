@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mindfull.Adapter.ExerciseRecordAdapter;
 import com.example.mindfull.Models.AnalyticsRecord;
@@ -80,27 +81,30 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String repcount = repCount.getText().toString();
-                final ExerciseRecord exerciseRecord = new ExerciseRecord(auth.getUid(),exercise_name,repcount);
-                exerciseRecord.setDate(res);
-                exerciseRecord.setMonth(separated[1]);
-                repCount.setText("");
+                if(repcount=="") {
+                    Toast.makeText(ExerciseDetailActivity.this, "Please enter something", Toast.LENGTH_SHORT).show();
+                } else {
+                    final ExerciseRecord exerciseRecord = new ExerciseRecord(auth.getUid(),exercise_name,repcount);
+                    exerciseRecord.setDate(res);
+                    exerciseRecord.setMonth(separated[1]);
+                    repCount.setText("");
 
-                database.getReference().child("Reps").child(auth.getUid()).push().setValue(exerciseRecord).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
+                    database.getReference().child("Reps").child(auth.getUid()).push().setValue(exerciseRecord).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(ExerciseDetailActivity.this, "Saved reps successfully", Toast.LENGTH_SHORT).show();
+                        }
+                    });
 
-                    }
-                });
+                    final AnalyticsRecord analyticsRecord = new AnalyticsRecord(res,separated[1],repcount);
 
-                final AnalyticsRecord analyticsRecord = new AnalyticsRecord(res,separated[1],repcount);
+                    database.getReference().child("AnalyticsRecord").child(auth.getUid()).child(exercise_name).push().setValue(analyticsRecord).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
 
-                database.getReference().child("AnalyticsRecord").child(auth.getUid()).child(exercise_name).push().setValue(analyticsRecord).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-
-                    }
-                });
-
+                        }
+                    });
+                }
             }
         });
 

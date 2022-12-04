@@ -60,11 +60,11 @@ public class MeditateDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(mediaPlayer.isPlaying()) {
-                    btnPlay.setText("PLAY");
                     mediaPlayer.pause();
+                    btnPlay.setBackgroundResource(R.drawable.ic_baseline_play_arrow_24);
                 } else {
-                    btnPlay.setText("PAUSE");
                     mediaPlayer.start();
+                    btnPlay.setBackgroundResource(R.drawable.ic_baseline_pause_24);
                 }
             }
         });

@@ -1,69 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
-    android:layout_marginStart="5dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginRight="7dp"
-    android:background="@drawable/bg_exercise_record"
-    android:maxWidth="310dp"
-    android:maxHeight="400dp"
-    android:minHeight="30dp">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recordName"
-        android:layout_margin="8dp"
-        android:inputType="textLongMessage|textMultiLine"
-        android:maxWidth="270dp"
-        android:minWidth="50dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/recordRep"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:flow_verticalBias="1.0"
-        />
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="8dp"
+        android:layout_margin="10dp"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/recordRep"
-        android:layout_margin="8dp"
-        android:inputType="textLongMessage|textMultiLine"
-        android:maxWidth="270dp"
-        android:minWidth="50dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/recordDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/recordName"
-        app:flow_verticalBias="1.0"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/recordDate"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="3dp"
-        android:text="12th November"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
-        />
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
 
-    <androidx.constraintlayout.widget.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recordName"
+                    android:layout_margin="8dp"
+                    android:inputType="textLongMessage|textMultiLine"
+                    android:maxWidth="270dp"
+                    android:minWidth="50dp"
+                    android:text="TextView"
+                    android:fontFamily="@font/baloo"
+                    />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recordDate"
+                    android:text="12th November"
+                    android:textSize="10sp"
+                    android:layout_margin="8dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recordRep"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:layout_marginRight="2dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="reps"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

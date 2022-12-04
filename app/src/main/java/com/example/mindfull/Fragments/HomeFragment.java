@@ -101,8 +101,8 @@ public class HomeFragment extends Fragment {
                         Object total = map.get("repCount");
                         int pTotal = Integer.parseInt(String.valueOf(total));
                         totalReps += pTotal;
-                        binding.totalDay.setText(String.valueOf(totalReps));
                     }
+                    binding.totalDay.setText(String.valueOf(totalReps));
                 }
             }
 
