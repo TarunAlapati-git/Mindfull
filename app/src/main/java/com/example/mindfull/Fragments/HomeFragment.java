@@ -136,6 +136,33 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        String sleepDate = separated[1] + " " + separated[2];
+
+        //Getting Sleep Today
+        DatabaseReference Sleepreference = FirebaseDatabase.getInstance().getReference("AlarmRecord").child(auth.getUid());
+        Query Sleepquery = Sleepreference.orderByChild("date").equalTo(sleepDate);
+        Sleepquery.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()) {
+                    int timeSlept = 0;
+                    for(DataSnapshot ds:snapshot.getChildren()) {
+                        Map<String,Object> map = (Map<String, Object>) ds.getValue();
+                        Object total = map.get("timeSlept");
+                        int pTotal = Integer.parseInt(String.valueOf(total));
+                        timeSlept += pTotal;
+                    }
+                    binding.sleepDay.setText(String.valueOf(timeSlept));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         //Data for Loading the Graph
 
         ArrayList<PieEntry> Daydata = new ArrayList<>();
