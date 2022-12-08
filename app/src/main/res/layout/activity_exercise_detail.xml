@@ -69,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#ECEDE8"
-                        android:text="testing sfbasnbfmsanfbsamfnbasf asfasfasfasfasfasf"
+                        android:text="Exercise Description will be shown in here with necessary steps and actions."
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
 

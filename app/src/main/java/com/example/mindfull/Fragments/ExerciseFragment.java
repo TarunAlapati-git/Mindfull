@@ -1,18 +1,20 @@
 package com.example.mindfull.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.mindfull.Adapter.ExerciseAdapter;
 import com.example.mindfull.Models.Exercises;
-import com.example.mindfull.R;
 import com.example.mindfull.databinding.FragmentExerciseBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ExerciseFragment extends Fragment {
@@ -33,6 +36,7 @@ public class ExerciseFragment extends Fragment {
     FragmentExerciseBinding binding;
     ArrayList<Exercises> list = new ArrayList<>();
     FirebaseDatabase database;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,6 +71,34 @@ public class ExerciseFragment extends Fragment {
 
             }
         });
+
+        binding.searchView.clearFocus();
+        binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String text) {
+
+                ArrayList<Exercises> filteredlist = new ArrayList<>();
+                for(Exercises exercise: list) {
+                    if(exercise.getName().toLowerCase().contains(text.toLowerCase())) {
+                        filteredlist.add(exercise);
+                    }
+                }
+
+                if(filteredlist.isEmpty()) {
+                    Toast.makeText(getContext(),"No data found",Toast.LENGTH_SHORT).show();
+                } else {
+                    adapter.setFilteredList(filteredlist,getContext());
+                }
+
+                return true;
+            }
+        });
+
 
         return binding.getRoot();
     }

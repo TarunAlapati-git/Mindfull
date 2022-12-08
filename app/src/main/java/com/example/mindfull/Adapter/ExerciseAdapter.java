@@ -32,6 +32,12 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
         this.context = context;
     }
 
+    public void setFilteredList(ArrayList<Exercises> filteredList,Context context) {
+        this.list = filteredList;
+        this.context = context;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -61,6 +67,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
                 context.startActivity(intent);
             }
         });
+
 
     }
 

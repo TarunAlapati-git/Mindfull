@@ -22,6 +22,8 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -150,7 +152,7 @@ public class HomeFragment extends Fragment {
                         Map<String,Object> map = (Map<String, Object>) ds.getValue();
                         Object total = map.get("timeSlept");
                         int pTotal = Integer.parseInt(String.valueOf(total));
-                        timeSlept += pTotal;
+                        timeSlept = Math.max(timeSlept,pTotal);
                     }
                     binding.sleepDay.setText(String.valueOf(timeSlept));
                 }
